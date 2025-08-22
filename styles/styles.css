@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.header {
+  background-color: crimson;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.nav-list {
+  display: flex;           
+  justify-content: center; 
+  gap: 2rem;               
+  list-style: none;        
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 3fr; 
+  gap: 2rem;                      
+  padding: 2rem;
+  min-height: 80vh;               
+}
+
+.sidebar {
+  background-color: navy;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+  color: navy;
+}
+
+.card-container {
+  display: flex;           
+  gap: 1rem;              
+  margin-top: 1.5rem;
+  flex-wrap: wrap;         
+}
+
+.card {
+  background-color: white;
+  border-left: 4px solid navy;
+  padding: 1rem;
+  flex: 1 1 200px;        
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr; 
+    padding: 1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;     
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;     
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .content, .sidebar {
+    padding: 1rem;
+  }
+
+  .card {
+    flex: 1 1 100%; 
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .card-container {
+    gap: 2rem;
+  }
+}
